@@ -1,37 +1,65 @@
-## Welcome to GitHub Pages
+## How-to Algo 7. Teamwork
 
-You can use the [editor on GitHub](https://github.com/Di0niz/algo07_teamwork/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+ 
+### Codingame
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Ссылка на контест: https://www.codingame.com/multiplayer/bot-programming/fantastic-bits
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Лайфкодинги
 
-```markdown
-Syntax highlighted code block
+### 02/22 
 
-# Header 1
-## Header 2
-### Header 3
+https://youtu.be/YNaz9K65Z8U
 
-- Bulleted
-- List
+### 03/01
 
-1. Numbered
-2. List
+https://youtu.be/21i3UjcWGSQ
 
-**Bold** and _Italic_ and `Code` text
+Обсуждаем написания бота:
 
-[Link](url) and ![Image](src)
+03:15 - чуть-чуть про вектора;
+17:00 - читаем "чужой" код;
+30:00 - запускаем простую стратегию в codingame;
+49:00 - чуть-чуть про тестирование (пока нечего тестировать);
+54:00 - ищем ближайший snaffle;
+
+## Примеры (Python)
+
+### Entity
+
+
+```python
+
+class Entity:
+    """Описание класса игрока"""
+
+    def __init__(self, entity_id, entity_type, x, y, speed_x, speed_y, state, radius=100.0, max_speed=150.0, mass=1.0, friction=1.0):
+        self.entity_id = int(entity_id)
+        self.entity_type = entity_type
+        self.position = Vec2(int(x), int(y))
+        self.velocity = Vec2(int(speed_x), int(speed_y))
+        self.state = int(state)
+        self.mass = mass
+        self.radius = radius
+        self.max_speed = max_speed
+        self.friction = friction
+
+        self.avoidance = Vec2.zero()
+        self.steer     = Vec2.zero()
+        self.desired_velocity = self.velocity
+
+        self.thrust    = 150
+
+
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### Чтение из консоли
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Di0niz/algo07_teamwork/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+```python
+entity_id, entity_type, x, y, vx, vy, state = input().split()
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+wizard = Entity(entity_id, entity_type, x, y, vx, vy, state, 400, 300, 1.0, 0.75)
+```
