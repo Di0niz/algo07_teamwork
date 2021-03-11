@@ -24,6 +24,15 @@
 - [49:00](https://youtu.be/21i3UjcWGSQ&t=2940s) - чуть-чуть про тестирование (пока нечего тестировать);
 - [54:00](https://youtu.be/21i3UjcWGSQ&t=3240s) - ищем ближайший snaffle;
 
+### 03/11 
+
+Материалы:
+
+- [Стратегии для принятия решений](https://www.codingame.com/blog/lazy-keep-simple/);
+- [Идеи для игры](https://www.codingame.com/forum/t/fantastic-bits-feedback-strategy/2360/38);
+- [Multiagent](https://www.cs.utexas.edu/~larg/ijcai17_tutorial/multiagent_learning.pdf);
+- [Ad Hoc Teamwork](https://arxiv.org/pdf/1809.07880v1.pdf);
+
 ## Примеры (Python)
 
 ### Entity
