@@ -261,11 +261,11 @@ class World:
 
     def spell_cost(self, spell):
         spells = {
-            Strategy.CAST_ACCIO: (20, 6),
-            Strategy.CAST_FLIPENDO: (20, 3),
-            Strategy.CAST_OBLIVIATE: (5, 1),
-            Strategy.CAST_PETRIFICUS: (10, 3)
-            }
+            # Strategy.CAST_ACCIO: (20, 6),
+            # Strategy.CAST_FLIPENDO: (20, 3),
+            # Strategy.CAST_OBLIVIATE: (5, 1),
+            # Strategy.CAST_PETRIFICUS: (10, 3)
+        }
         return spells[spell]
 
     def make_spell(self, wizard, spell, target):
